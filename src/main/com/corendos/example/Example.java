@@ -41,7 +41,6 @@ public class Example {
         logger.info("Init");
     }
 
-
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> event) {
         logger.info("Registering Blocks");
