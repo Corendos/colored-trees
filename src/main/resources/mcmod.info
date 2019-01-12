@@ -1,0 +1,8 @@
+[{
+  "modid": "colored_trees",
+  "name": "Colored Trees",
+  "description": "Adds colored trees to the game. Saplings can be used as dyes",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "authorList": ["Corendos"]
+}]

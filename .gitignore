@@ -1,4 +1,10 @@
 .idea/
+.settings/
+.gradle/
 bin/
 build/
 classes/
+minecraft/
+out/
+run/*
+wip/

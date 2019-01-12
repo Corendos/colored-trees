@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "colored_trees:block/magenta_colored_sapling"
+    }
+}

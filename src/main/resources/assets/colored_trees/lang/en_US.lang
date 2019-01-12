@@ -1,0 +1,17 @@
+tile.new_block.name=New Block
+tile.colored_sapling.white.name=White Sapling
+tile.colored_sapling.orange.name=Orange Sapling
+tile.colored_sapling.magenta.name=Magenta Sapling
+tile.colored_sapling.light_blue.name=Light Blue Sapling
+tile.colored_sapling.yellow.name=Yellow Sapling
+tile.colored_sapling.lime.name=Lime Sapling
+tile.colored_sapling.pink.name=Pink Sapling
+tile.colored_sapling.gray.name=Gray Sapling
+tile.colored_sapling.silver.name=Light Gray Sapling
+tile.colored_sapling.cyan.name=Cyan Sapling
+tile.colored_sapling.purple.name=Purple Sapling
+tile.colored_sapling.blue.name=Blue Sapling
+tile.colored_sapling.brown.name=Brown Sapling
+tile.colored_sapling.green.name=Green Sapling
+tile.colored_sapling.red.name=Red Sapling
+tile.colored_sapling.black.name=Black Sapling

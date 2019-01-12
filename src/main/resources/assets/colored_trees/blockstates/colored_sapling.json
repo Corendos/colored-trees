@@ -1,0 +1,53 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "color=white": {
+      "model": "colored_trees:white_colored_sapling"
+    },
+    "color=orange": {
+      "model": "colored_trees:orange_colored_sapling"
+    },
+    "color=magenta": {
+      "model": "colored_trees:magenta_colored_sapling"
+    },
+    "color=light_blue": {
+      "model": "colored_trees:light_blue_colored_sapling"
+    },
+    "color=yellow": {
+      "model": "colored_trees:yellow_colored_sapling"
+    },
+    "color=lime": {
+      "model": "colored_trees:lime_colored_sapling"
+    },
+    "color=pink": {
+      "model": "colored_trees:pink_colored_sapling"
+    },
+    "color=gray": {
+      "model": "colored_trees:gray_colored_sapling"
+    },
+    "color=silver": {
+      "model": "colored_trees:silver_colored_sapling"
+    },
+    "color=cyan": {
+      "model": "colored_trees:cyan_colored_sapling"
+    },
+    "color=purple": {
+      "model": "colored_trees:purple_colored_sapling"
+    },
+    "color=blue": {
+      "model": "colored_trees:blue_colored_sapling"
+    },
+    "color=brown": {
+      "model": "colored_trees:brown_colored_sapling"
+    },
+    "color=green": {
+      "model": "colored_trees:green_colored_sapling"
+    },
+    "color=red": {
+      "model": "colored_trees:red_colored_sapling"
+    },
+    "color=black": {
+      "model": "colored_trees:black_colored_sapling"
+    }
+  }
+}
