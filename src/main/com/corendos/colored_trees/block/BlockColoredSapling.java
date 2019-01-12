@@ -1,5 +1,6 @@
 package com.corendos.colored_trees.block;
 
+import com.corendos.colored_trees.ColoredTrees;
 import com.corendos.colored_trees.init.ModItems;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
@@ -28,7 +29,7 @@ public class BlockColoredSapling extends BlockBush implements IGrowable {
         this.setDefaultState(this.blockState.getBaseState().withProperty(COLOR, EnumDyeColor.WHITE));
         this.setCreativeTab(CreativeTabs.DECORATIONS);
         this.setRegistryName(BLOCK_NAME);
-        this.setUnlocalizedName(BLOCK_NAME);
+        this.setUnlocalizedName(ColoredTrees.MODID + "." + BLOCK_NAME);
     }
 
     @Override
