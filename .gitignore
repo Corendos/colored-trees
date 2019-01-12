@@ -8,3 +8,5 @@ minecraft/
 out/
 run/*
 wip/
+.classpath
+.project
