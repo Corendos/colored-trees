@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ModItems {
-    public static final ItemColoredSapling item_colored_sapling;
+    public static final List<ItemColoredSapling> items_colored_sapling;
     public static final List<ItemColoredLeaves> items_colored_leaves;
 
     static {
-        item_colored_sapling = new ItemColoredSapling();
+        items_colored_sapling = new ArrayList<>(16);
         items_colored_leaves = new ArrayList<>(16);
     }
 }

@@ -35,23 +35,16 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
         ColoredTrees.logger.info("Registering Models");
-
-        Item item = ModItems.item_colored_sapling;
-        NonNullList<ItemStack> subItemList = NonNullList.create();
-        item.getSubItems(CreativeTabs.DECORATIONS, subItemList);
-        for (ItemStack itemStack : subItemList) {
-            ResourceLocation rl = new ResourceLocation(
-                    ColoredTrees.MODID,
-                    EnumDyeColor.byMetadata(itemStack.getMetadata()).getName() + "_" + BlockColoredSapling.BLOCK_NAME);
-            ModelResourceLocation subItemModel = new ModelResourceLocation(rl, null);
-            ModelLoader.setCustomModelResourceLocation(item, itemStack.getMetadata(), subItemModel);
-        }
-
         for (int i = 0;i < 16;++i) {
-            ModelResourceLocation modelResourceLocation = new ModelResourceLocation(
+            ModelResourceLocation leavesLocation = new ModelResourceLocation(
                     ModItems.items_colored_leaves.get(i).getRegistryName(),
                     null);
-            ModelLoader.setCustomModelResourceLocation(ModItems.items_colored_leaves.get(i), 0, modelResourceLocation);
+            ModelLoader.setCustomModelResourceLocation(ModItems.items_colored_leaves.get(i), 0, leavesLocation);
+
+            ModelResourceLocation saplingLocation = new ModelResourceLocation(
+                    ModItems.items_colored_sapling.get(i).getRegistryName(),
+                    null);
+            ModelLoader.setCustomModelResourceLocation(ModItems.items_colored_sapling.get(i), 0, saplingLocation);
         }
 
     }

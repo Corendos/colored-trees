@@ -2,48 +2,53 @@ package com.corendos.colored_trees.item;
 
 import com.corendos.colored_trees.block.BlockColoredSapling;
 import com.corendos.colored_trees.init.ModBlocks;
+import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.ItemColored;
-import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.*;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public class ItemColoredSapling extends ItemColored {
-    public ItemColoredSapling() {
-        super(ModBlocks.block_colored_sapling, true);
-        this.setRegistryName(BlockColoredSapling.BLOCK_NAME);
+public class ItemColoredSapling extends ItemBlock {
+    public ItemColoredSapling(Block block) {
+        super(block);
+        this.setRegistryName(block.getRegistryName());
+        this.setUnlocalizedName(block.getUnlocalizedName());
         this.setCreativeTab(CreativeTabs.DECORATIONS);
-
-        String[] names = new String[EnumDyeColor.values().length];
-
-        for (int i = 0;i < names.length;i++) {
-            names[i] = EnumDyeColor.byMetadata(i).getName();
-        }
-        this.setSubtypeNames(names);
     }
 
+    @Nonnull
     @Override
-    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items) {
-        if (tab == CreativeTabs.DECORATIONS) {
-            for (EnumDyeColor enumDyeColor : EnumDyeColor.values()) {
-                items.add(new ItemStack(this, 1, enumDyeColor.getMetadata()));
+    public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    {
+        ItemStack itemstack = player.getHeldItem(hand);
+        net.minecraft.block.state.IBlockState state = worldIn.getBlockState(pos);
+        if (facing == EnumFacing.UP && player.canPlayerEdit(pos.offset(facing), facing, itemstack) && worldIn.isAirBlock(pos.up()))
+        {
+            worldIn.setBlockState(pos.up(), this.block.getDefaultState());
+
+            if (player instanceof EntityPlayerMP)
+            {
+                CriteriaTriggers.PLACED_BLOCK.trigger((EntityPlayerMP)player, pos.up(), itemstack);
             }
+
+            itemstack.shrink(1);
+            return EnumActionResult.SUCCESS;
         }
-    }
-
-    @Nullable
-    @Override
-    public Entity createEntity(World world, Entity location, ItemStack itemstack) {
-        EntityItem entityItem = new EntityItem(world, location.posX, location.posY, location.posZ, itemstack);
-        entityItem.motionX = location.motionX;
-        entityItem.motionY = location.motionY;
-        entityItem.motionZ = location.motionZ;
-
-        return entityItem;
+        else
+        {
+            return EnumActionResult.FAIL;
+        }
     }
 }
