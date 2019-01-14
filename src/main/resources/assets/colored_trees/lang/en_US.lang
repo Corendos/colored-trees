@@ -1,4 +1,5 @@
 tile.new_block.name=New Block
+
 tile.colored_trees.colored_sapling.white.name=White Sapling
 tile.colored_trees.colored_sapling.orange.name=Orange Sapling
 tile.colored_trees.colored_sapling.magenta.name=Magenta Sapling
@@ -15,3 +16,20 @@ tile.colored_trees.colored_sapling.brown.name=Brown Sapling
 tile.colored_trees.colored_sapling.green.name=Green Sapling
 tile.colored_trees.colored_sapling.red.name=Red Sapling
 tile.colored_trees.colored_sapling.black.name=Black Sapling
+
+tile.colored_trees.colored_leaves.white.name=White Leaves
+tile.colored_trees.colored_leaves.orange.name=Orange Leaves
+tile.colored_trees.colored_leaves.magenta.name=Magenta Leaves
+tile.colored_trees.colored_leaves.light_blue.name=Light Blue Leaves
+tile.colored_trees.colored_leaves.yellow.name=Yellow Leaves
+tile.colored_trees.colored_leaves.lime.name=Lime Leaves
+tile.colored_trees.colored_leaves.pink.name=Pink Leaves
+tile.colored_trees.colored_leaves.gray.name=Gray Leaves
+tile.colored_trees.colored_leaves.silver.name=Light Gray Leaves
+tile.colored_trees.colored_leaves.cyan.name=Cyan Leaves
+tile.colored_trees.colored_leaves.purple.name=Purple Leaves
+tile.colored_trees.colored_leaves.blue.name=Blue Leaves
+tile.colored_trees.colored_leaves.brown.name=Brown Leaves
+tile.colored_trees.colored_leaves.green.name=Green Leaves
+tile.colored_trees.colored_leaves.red.name=Red Leaves
+tile.colored_trees.colored_leaves.black.name=Black Leaves
